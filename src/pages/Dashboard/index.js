@@ -17,9 +17,13 @@ export default function Dashboard({ navigation }) {
     loadSchedule();
   }, [navigation]);
 
+  function handleOpenDrawer() {
+    navigation.openDrawer();
+  }
+
   return (
     <Container colors={['#545567', '#141518']}>
-      <Header title="Agenda" />
+      <Header title="Agenda" handleOpenDrawer={handleOpenDrawer} />
       <Content>
         <Div>
           <Circle>{aulas.length}</Circle>

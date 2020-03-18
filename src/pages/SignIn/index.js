@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ToastAndroid } from 'react-native';
+import { AsyncStorage, ToastAndroid } from 'react-native';
 
 import { cpf } from 'cpf-cnpj-validator';
 
@@ -24,6 +24,7 @@ export default function SignIn({ navigation }) {
       const cpf_number = cpf_user.replace(/\D/g, ''); // Remove tudo o que não é dígito
       try {
         await api.get(`/alunos/${cpf_number}`).then(res => {
+          AsyncStorage.setItem('signed', true);
           navigation.navigate('Dashboard', { id: res.data.id });
         });
       } catch (e) {
