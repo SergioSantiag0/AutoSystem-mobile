@@ -1,6 +1,8 @@
 import React from 'react';
 import { DrawerNavigatorItems } from 'react-navigation-drawer';
 
+import { useUserData } from '../../context/UserData';
+
 import {
   Container,
   UserArea,
@@ -10,13 +12,15 @@ import {
 } from './styles';
 
 export default function CustomDrawer({ ...props }) {
+  const { userData } = useUserData();
+
   return (
     <Container>
       <UserArea>
         <WelcomeText>Bem-vindo</WelcomeText>
         <UserDates>
-          <TextDates>Aluno: Sérgio Felipe</TextDates>
-          <TextDates>CPF: 155.940.006-40</TextDates>
+          <TextDates>Nome: {userData.nome}</TextDates>
+          <TextDates>CPF: {userData.cpf}</TextDates>
         </UserDates>
       </UserArea>
 

@@ -5,8 +5,7 @@ export const Container = styled.View`
   margin-bottom: 15px;
   padding: 20px;
   border-radius: 2px;
-  background: #fff;
-
+  background: ${props => (props.available ? '#f2f2f2' : '#fff')};
   opacity: ${props => (props.past ? 0.6 : 1)};
   elevation: 5;
   display: flex;
@@ -17,15 +16,20 @@ export const Container = styled.View`
   border-left-color: #404040;
 `;
 
+export const TextTime = styled.Text`
+  color: ${props => (props.available ? '#999' : '#00b652')};
+  font-size: 18px;
+`;
+
+export const TextName = styled.Text`
+  margin-top: 3px;
+  color: ${props => (props.available ? '#999' : '#00b652')};
+  font-size: 20px;
+`;
+
 export const TextConclude = styled.Text`
   color: ${props => (props.past ? '#228B22' : '#f64c75')};
   font-size: 14px;
-  font-weight: bold;
-`;
-
-export const TextStyled = styled(Text)`
-  margin-bottom: 3px;
-  font-size: 16px;
   font-weight: bold;
 `;
 

@@ -4,9 +4,9 @@ import Icon from 'react-native-vector-icons/Feather';
 export const Container = styled.SafeAreaView`
   height: 15%;
   flex-direction: row;
-  justify-content: space-between;
   align-items: flex-end;
-  background: #7159c1;
+  justify-content: space-between;
+  background: #05c148;
 `;
 
 export const Content = styled.View`
@@ -15,9 +15,11 @@ export const Content = styled.View`
 
 export const Title = styled.Text`
   font-size: 26px;
+  width: 100%;
   font-weight: bold;
   color: #fff;
-  margin: 0 auto 20px 75px;
+  margin-bottom: 17px;
+  margin-left: 75px;
 `;
 
 export const Icone = styled(Icon)`

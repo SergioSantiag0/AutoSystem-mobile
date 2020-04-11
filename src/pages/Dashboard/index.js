@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 import api from '../../services/api';
 
@@ -21,8 +22,10 @@ export default function Dashboard({ navigation }) {
     navigation.openDrawer();
   }
 
+  const completed = aulas.filter(aula => aula.past === true);
+
   return (
-    <Container colors={['#545567', '#141518']}>
+    <Container>
       <Header title="Agenda" handleOpenDrawer={handleOpenDrawer} />
       <Content>
         <Div>
@@ -30,11 +33,11 @@ export default function Dashboard({ navigation }) {
           <CircleText>Agendadas</CircleText>
         </Div>
         <Div>
-          <Circle>5</Circle>
+          <Circle>{completed.length}</Circle>
           <CircleText>Finalizadas</CircleText>
         </Div>
         <Div>
-          <Circle>8</Circle>
+          <Circle>{aulas.length - completed.length}</Circle>
           <CircleText>Restantes</CircleText>
         </Div>
       </Content>
@@ -46,3 +49,11 @@ export default function Dashboard({ navigation }) {
     </Container>
   );
 }
+
+Dashboard.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+    getParam: PropTypes.func.isRequired,
+    openDrawer: PropTypes.func.isRequired,
+  }).isRequired,
+};

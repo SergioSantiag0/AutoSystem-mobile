@@ -5,7 +5,7 @@ export const Container = styled.View`
 `;
 
 export const UserArea = styled.View`
-  background: #7159c1;
+  background: #05c148;
   height: 25%;
   justify-content: center;
   padding: 5px 15px;

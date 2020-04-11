@@ -22,18 +22,47 @@ export const Imagem = styled(Image)`
 
 export const TextInputStyled = styled(MaskedInput)`
   background: #fff;
+  elevation: 5;
   width: 90%;
   margin-bottom: 15px;
   color: #222;
   font-size: 17px;
   border-radius: 7px;
-  padding: 10px;
+  padding: 10px 15px;
+`;
+
+export const TextInputInstrutor = styled.TextInput`
+  background: #fff;
+  elevation: 5;
+  width: 90%;
+  margin-bottom: 15px;
+  color: #222;
+  font-size: 17px;
+  border-radius: 7px;
+  padding: 10px 15px;
+`;
+
+export const RadioContainer = styled.View`
+  flex-direction: row;
+  margin: 10px;
+`;
+
+export const RadioContent = styled.View`
+  flex-direction: row;
+  align-items: center;
+  margin: 0 20px;
+`;
+
+export const RadioText = styled.Text`
+  font-size: 20px;
+  color: #fff;
 `;
 
 export const Button = styled(TouchableOpacity)`
   background: #00b652;
   width: 90%;
   margin: 7px 0px;
+  justify-content: space-between;
   align-items: center;
   font-size: 17px;
   border-radius: 7px;

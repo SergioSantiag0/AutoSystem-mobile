@@ -1,8 +1,8 @@
 import styled from 'styled-components/native';
-import { LinearGradient } from 'expo-linear-gradient';
 
-export const Container = styled(LinearGradient)`
+export const Container = styled.SafeAreaView`
   flex: 1;
+  background: #ccc;
 `;
 
 export const List = styled.FlatList.attrs({
@@ -26,9 +26,11 @@ export const Circle = styled.Text`
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #7159c1;
+  background: #05c148;
+  font-weight: bold;
   color: #fff;
   padding: 5px;
+  margin-bottom: 10px;
   width: 35px;
   height: 35px;
   border-radius: 20;
@@ -36,5 +38,6 @@ export const Circle = styled.Text`
 
 export const CircleText = styled.Text`
   font-size: 18px;
-  color: #fff;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
 `;

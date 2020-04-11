@@ -33,5 +33,6 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'no-return-assign': 0,
+    'no-unused-expressions': 'off',
   },
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { DrawerView } from 'react-navigation-drawer';
+import PropTypes from 'prop-types';
 
 import { Container, Content, Title, Icone } from './styles';
 
@@ -20,3 +20,8 @@ export default function Header({ title, handleOpenDrawer }) {
     </Container>
   );
 }
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  handleOpenDrawer: PropTypes.func.isRequired,
+};
